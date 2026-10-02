@@ -520,3 +520,6 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   .js .reveal{opacity:1;transform:none;filter:none}
   .marquee__track{animation:none}
 }
+.plan__list li.is-no{color:var(--dim)}
+.plan__list li.is-no i{color:var(--dim)}
+.plan__list b{color:var(--fg);font-weight:700}
