@@ -12,7 +12,7 @@
   const burger = d.querySelector('.nav__burger'), menu = d.getElementById('menu');
   const setMenu = open => {
     burger.setAttribute('aria-expanded', open);
-    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    burger.setAttribute('aria-label', (root.lang==='en') ? (open ? 'Close menu' : 'Open menu') : (open ? 'Cerrar menú' : 'Abrir menú'));
     if (open) { menu.hidden = false; requestAnimationFrame(() => menu.classList.add('is-open')); d.body.style.overflow = 'hidden'; }
     else { menu.classList.remove('is-open'); d.body.style.overflow = ''; setTimeout(() => { if (burger.getAttribute('aria-expanded') === 'false') menu.hidden = true; }, 400); }
   };
