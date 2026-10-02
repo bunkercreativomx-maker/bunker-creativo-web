@@ -71,7 +71,7 @@ section{padding:clamp(5rem,11vw,9rem) var(--pad);max-width:var(--max);margin:0 a
 .menu.is-open a:nth-child(2){transition-delay:.05s}.menu.is-open a:nth-child(3){transition-delay:.1s}.menu.is-open a:nth-child(4){transition-delay:.15s}.menu.is-open a:nth-child(5){transition-delay:.2s;color:var(--amber)}
 
 /* hero */
-.hero{min-height:100dvh;display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,4vw,4.5rem);align-items:center;padding-top:clamp(6.5rem,10vw,7.5rem);padding-bottom:3rem}
+.hero{min-height:min(100dvh,980px);display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,4vw,4.5rem);align-items:center;padding-top:clamp(6.5rem,10vw,7.5rem);padding-bottom:3rem}
 .hero__title{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,8.4vw,6rem);line-height:.94;letter-spacing:-.04em;margin:0 0 1.75rem}
 .hero__title .line{display:block;overflow:hidden;padding-bottom:.06em}
 .hero__title .line>span{display:inline-block;animation:rise 1.1s var(--ease) both}
@@ -249,21 +249,29 @@ section{padding:clamp(5rem,11vw,9rem) var(--pad);max-width:var(--max);margin:0 a
 .wa-float{position:fixed;right:18px;bottom:18px;z-index:45;width:60px;height:60px;border-radius:50%;background:#25d366;color:#08210f;display:none;place-items:center;font-size:1.9rem;box-shadow:0 14px 34px -10px rgba(37,211,102,.6)}
 
 
-/* hero stage: web + post + ad + coroplast sticker */
+/* hero stage: real web + real mobile + coroplast photo */
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(60vw 50vw at 85% 0%,rgba(40,70,190,.35),transparent 60%),radial-gradient(40vw 40vw at 0% 100%,rgba(255,91,31,.10),transparent 60%)}
-.hero__stage{position:relative;aspect-ratio:1/0.92;min-height:0}
-.hero__stage figure{position:absolute;margin:0;border-radius:18px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line-2);box-shadow:0 40px 80px -30px rgba(3,6,20,.85)}
-.hero__stage img{width:100%;height:100%;object-fit:cover}
-.stage__web{left:0;top:4%;width:80%;padding:8px 8px 0;animation:stIn 1.2s .15s var(--ease) both}
-.stage__web .site__bar{padding:0 4px 8px}
-.stage__web img{aspect-ratio:16/10;height:auto;border-radius:10px 10px 0 0;object-position:left top}
-.stage__post{right:0;top:0;width:34%;aspect-ratio:4/5;rotate:5deg;animation:stIn 1.2s .32s var(--ease) both}
-.stage__ad{right:9%;bottom:0;width:38%;aspect-ratio:1;rotate:-4deg;animation:stIn 1.2s .45s var(--ease) both}
-.stage__coro{position:absolute;left:3%;bottom:-2%;width:150px;height:150px;border-radius:50%;background:var(--orange);color:var(--orange-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--display);line-height:1;rotate:-12deg;box-shadow:0 24px 40px -14px rgba(255,91,31,.55);animation:pop .9s .8s cubic-bezier(.34,1.56,.64,1) both;transition:scale .5s var(--ease-2)}
-.stage__coro:hover{scale:1.06}
-.stage__coro small{font-size:.78rem;font-weight:700;max-width:9ch;line-height:1.1;margin-bottom:.25rem}
-.stage__coro strong{font-size:2.7rem;font-weight:800;letter-spacing:-.04em}
-@keyframes stIn{from{opacity:0;transform:translateY(40px);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
+.hero__stage{position:relative;width:100%;max-width:680px;justify-self:end;aspect-ratio:1/0.78}
+.hero__stage::before{content:"";position:absolute;inset:8% -6% -4% 10%;z-index:-1;background:radial-gradient(closest-side,rgba(200,255,46,.16),transparent);filter:blur(30px)}
+.st{position:absolute;margin:0;display:block;overflow:hidden;box-shadow:0 60px 100px -45px rgba(2,5,20,1),0 0 0 1px rgba(243,245,255,.1)}
+.st img{display:block;width:100%;height:100%;object-fit:cover}
+.st--web{left:0;top:0;width:90%;border-radius:16px;background:#1a2756;padding:8px 8px 0;animation:stIn 1.1s .1s var(--ease) both}
+.st--web .site__bar{padding:0 4px 8px}
+.st--web img{aspect-ratio:16/10;height:auto;border-radius:9px 9px 0 0;object-position:left top}
+.st--phone{right:0;bottom:0;width:29%;aspect-ratio:9/19.5;border-radius:32px;background:#05070f;padding:7px;animation:stIn 1.1s .3s var(--ease) both}
+.st--phone img{border-radius:26px;object-position:top}
+.hero__pill{display:inline-flex;max-width:100%;white-space:nowrap;align-items:center;gap:.6rem;margin:0 0 1.6rem;padding:.4rem .9rem .4rem .4rem;border-radius:999px;background:rgba(255,91,31,.12);border:1px solid rgba(255,91,31,.4);color:var(--fg);font-size:.95rem;font-weight:500;transition:background .3s,border-color .3s;animation:fade 1s .05s var(--ease) both}
+.hero__pill:hover{background:rgba(255,91,31,.22);border-color:var(--orange)}
+.hero__pill-new{background:var(--orange);color:var(--orange-ink);font-weight:800;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .6rem;border-radius:999px}
+.hero__pill b{color:var(--orange);font-weight:800}
+.hero__pill i{transition:translate .3s var(--ease)}
+.hero__pill:hover i{translate:3px 0}
+.hero__proof{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem 0;margin-top:2.25rem;max-width:520px;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.92rem;animation:fade 1s .6s var(--ease) both}
+.hero__proof span{width:100%;color:var(--dim);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.hero__proof a{color:var(--fg);font-weight:600;transition:color .25s}
+.hero__proof a+a::before{content:"·";color:var(--amber);margin:0 .7rem;font-weight:800}
+.hero__proof a:hover{color:var(--amber)}
+@keyframes stIn{from{opacity:0;transform:translateY(36px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
 @keyframes pop{from{opacity:0;scale:.3}to{opacity:1;scale:1}}
 
 /* coroplast: the wow block */
@@ -298,13 +306,13 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 @keyframes spin{to{rotate:360deg}}
 
 @media (max-width:1024px){
-  .hero__stage{max-width:640px;width:100%;margin-top:1rem}
+  .hero__stage{justify-self:start;margin-top:1rem}
   .coro__inner{grid-template-columns:1fr}
 }
 @media (max-width:767px){
-  .stage__coro{width:112px;height:112px}
-  .stage__coro strong{font-size:2rem}
-  .stage__coro small{font-size:.66rem}
+  .st--phone{border-radius:22px;padding:5px;width:31%}.st--phone img{border-radius:17px}
+  .hero__pill{font-size:.8rem;gap:.45rem}
+  .hero__proof{margin-top:2rem;font-size:.88rem}
   .coro__stack{height:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*var(--pad));padding:12px var(--pad) 24px;scrollbar-width:none;scroll-padding-inline:var(--pad)}
   .coro__stack::-webkit-scrollbar{display:none}
   .cs,.cs--1,.cs--2,.cs--3{position:relative;inset:auto;flex:0 0 74%;height:400px;width:auto;rotate:0deg;scroll-snap-align:start}
