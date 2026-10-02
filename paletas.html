@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunker Creativo · Propuestas de color</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Satoshi,system-ui,sans-serif;background:#0e0e10;color:#f1efe9;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.intro{max-width:1200px;margin:0 auto;padding:4rem 1.5rem 2rem}
+.intro h1{font-family:"Cabinet Grotesk";font-weight:800;font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.035em;line-height:1;margin:0 0 1rem}
+.intro p{color:#b5b2aa;max-width:60ch;font-size:1.1rem;margin:0}
+.opt{padding:clamp(2.5rem,6vw,5rem) 1.5rem;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1200px;margin:0 auto}
+.tag{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.tag b{font-family:"Cabinet Grotesk";font-weight:800;font-size:1.9rem;letter-spacing:-.02em}
+.tag span{color:var(--mut);max-width:62ch}
+.mock{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.hero{border-radius:24px;padding:clamp(1.75rem,4vw,3rem);background:var(--surf);position:relative;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate}
+.hero h2{font-family:"Cabinet Grotesk";font-weight:800;font-size:clamp(2.4rem,5vw,4rem);line-height:.95;letter-spacing:-.04em;margin:0 0 1rem}
+.hero h2 em{font-style:normal;color:var(--hl)}
+.hero p{color:var(--mut);max-width:40ch;margin:0 0 1.5rem}
+.btns{display:flex;gap:.6rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.6rem;height:48px;padding:0 .35rem 0 1.3rem;border-radius:999px;font-weight:700;background:var(--act);color:var(--actink);white-space:nowrap}
+.btn i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.14)}
+.btn.g{background:transparent;color:var(--fg);border:1.5px solid var(--line);padding:0 1.3rem}
+.pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2rem}
+.pill{padding:.45rem .9rem;border-radius:999px;font-weight:700;font-size:.9rem;display:inline-flex;gap:.45rem;align-items:center}
+.coro{border-radius:24px;overflow:hidden;position:relative;background:var(--coro-bg);color:var(--coro-fg);display:flex;flex-direction:column;isolation:isolate}
+.coro img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.coro .body{padding:1.5rem 1.6rem 1.75rem;position:relative}
+.coro h3{font-family:"Cabinet Grotesk";font-weight:800;font-size:2rem;letter-spacing:-.03em;margin:0 0 .3rem;line-height:1}
+.coro p{margin:0;opacity:.85}
+.price{position:absolute;top:-62px;right:18px;width:124px;height:124px;border-radius:50%;background:var(--burst);color:var(--burstink);display:grid;place-items:center;text-align:center;font-family:"Cabinet Grotesk";font-weight:800;line-height:.9;transform:rotate(-10deg);box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+.price small{display:block;font-size:.8rem;font-weight:700;letter-spacing:.04em}
+.price strong{font-size:2.3rem;letter-spacing:-.04em}
+.sw{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:16px}
+.sw div{border-radius:14px;padding:3.2rem .8rem .7rem;font-size:.78rem;font-weight:700;line-height:1.3;border:1px solid rgba(128,128,128,.25)}
+.sw div span{display:block;font-weight:500;opacity:.8}
+.why{margin:1.25rem 0 0;color:var(--mut);max-width:80ch;font-size:.98rem}
+
+/* A · Tinta CMYK */
+.a{--bg:#111013;--surf:#1a181d;--fg:#f4f1ec;--mut:#bdb8c2;--line:rgba(244,241,236,.22);--hl:#ff2e88;--act:#ff2e88;--actink:#1a0410;--coro-bg:#ffe14a;--coro-fg:#1a1500;--burst:#ff2e88;--burstink:#fff}
+.a .hero::before{content:"";position:absolute;inset:auto -60px -80px auto;width:340px;height:340px;border-radius:50%;background:#00b4e6;mix-blend-mode:screen;opacity:.55;z-index:-1}
+.a .hero::after{content:"";position:absolute;inset:auto 120px -140px auto;width:300px;height:300px;border-radius:50%;background:#ff2e88;mix-blend-mode:screen;opacity:.5;z-index:-1}
+/* B · Riso */
+.b{--bg:#eef0f4;--surf:#ffffff;--fg:#14162b;--mut:#4b4f68;--line:rgba(20,22,43,.25);--hl:#2b3cff;--act:#2b3cff;--actink:#fff;--coro-bg:#ff5ca8;--coro-fg:#1d0716;--burst:#2b3cff;--burstink:#fff}
+.b .hero{background-image:radial-gradient(rgba(43,60,255,.18) 1.4px,transparent 1.6px);background-size:14px 14px;background-color:#fff}
+.b .hero h2{text-shadow:3px 3px 0 rgba(255,92,168,.55)}
+/* C · Señal */
+.c{--bg:#0d1430;--surf:#14204a;--fg:#f3f5ff;--mut:#b4bde3;--line:rgba(243,245,255,.25);--hl:#c8ff2e;--act:#c8ff2e;--actink:#10180a;--coro-bg:#ff5b1f;--coro-fg:#1f0800;--burst:#c8ff2e;--burstink:#10180a}
+.c .hero::before{content:"";position:absolute;right:-40px;top:-40px;width:260px;height:260px;background:repeating-linear-gradient(-45deg,#c8ff2e 0 18px,transparent 18px 36px);opacity:.14;z-index:-1;border-radius:50%}
+
+@media (max-width:860px){.mock{grid-template-columns:1fr}.sw{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header class="intro">
+  <h1>3 propuestas de color</h1>
+  <p>Cada una está aplicada a la portada, al bloque de figuras de coroplast desde $380 y a los botones. Los colores salen de lo que hace una imprenta: tintas, risografía y anuncios de calle.</p>
+</header>
+
+<!-- A -->
+<section class="opt a">
+ <div class="wrap">
+  <div class="tag"><b>A · Tinta CMYK</b><span>Magenta de proceso, cian y amarillo sobre negro tinta. Lo más "imprenta" y lo más llamativo en redes.</span></div>
+  <div class="mock">
+   <div class="hero">
+    <div><h2>Diseño que<br><em>se nota.</em></h2><p>Contenido para redes, páginas web e impresión en Ciudad Juárez.</p>
+     <div class="btns"><span class="btn">Cotizar por WhatsApp <i class="ph-light ph-arrow-up-right"></i></span><span class="btn g">Ver trabajos</span></div></div>
+    <div class="pills"><span class="pill" style="background:#ff2e88;color:#1a0410">Redes sociales</span><span class="pill" style="background:#00b4e6;color:#001820">Páginas web</span><span class="pill" style="background:#ffe14a;color:#1a1500">Coroplast</span></div>
+   </div>
+   <div class="coro"><img src="assets/img/coroplast-party.webp" alt="Figuras de coroplast tamaño real en una fiesta"><div class="body"><div class="price"><span><small>DESDE</small><strong>$380</strong></span></div><h3>Figuras de coroplast</h3><p>Tamaño real, corte a silueta y base incluida.</p></div></div>
+  </div>
+  <div class="sw">
+   <div style="background:#111013;color:#f4f1ec">Negro tinta<span>#111013</span></div>
+   <div style="background:#ff2e88;color:#1a0410">Magenta<span>#FF2E88 · botones</span></div>
+   <div style="background:#00b4e6;color:#001820">Cian<span>#00B4E6 · web</span></div>
+   <div style="background:#ffe14a;color:#1a1500">Amarillo<span>#FFE14A · coroplast</span></div>
+   <div style="background:#1a181d;color:#f4f1ec">Superficie<span>#1A181D</span></div>
+   <div style="background:#f4f1ec;color:#111013">Papel<span>#F4F1EC · texto</span></div>
+  </div>
+  <p class="why">Por qué: cuenta tu historia sin decirla (eres imprenta y diseño). Cada servicio tiene su tinta: magenta para redes, cian para web, amarillo para coroplast. El riesgo es que se vea "arcoíris", así que el magenta manda y los otros dos solo marcan servicio.</p>
+ </div>
+</section>
+
+<!-- B -->
+<section class="opt b">
+ <div class="wrap">
+  <div class="tag"><b>B · Risograph</b><span>Azul riso eléctrico y rosa fluorescente sobre blanco frío, con textura de medio tono. Fresco, creativo, de estudio de diseño.</span></div>
+  <div class="mock">
+   <div class="hero">
+    <div><h2>Diseño que<br><em>se nota.</em></h2><p>Contenido para redes, páginas web e impresión en Ciudad Juárez.</p>
+     <div class="btns"><span class="btn">Cotizar por WhatsApp <i class="ph-light ph-arrow-up-right"></i></span><span class="btn g">Ver trabajos</span></div></div>
+    <div class="pills"><span class="pill" style="background:#2b3cff;color:#fff">Redes sociales</span><span class="pill" style="background:#ff5ca8;color:#1d0716">Páginas web</span><span class="pill" style="background:#14162b;color:#fff">Coroplast</span></div>
+   </div>
+   <div class="coro"><img src="assets/img/coroplast-party.webp" alt="Figuras de coroplast tamaño real en una fiesta"><div class="body"><div class="price"><span><small>DESDE</small><strong>$380</strong></span></div><h3>Figuras de coroplast</h3><p>Tamaño real, corte a silueta y base incluida.</p></div></div>
+  </div>
+  <div class="sw">
+   <div style="background:#eef0f4;color:#14162b">Blanco frío<span>#EEF0F4</span></div>
+   <div style="background:#2b3cff;color:#fff">Azul riso<span>#2B3CFF · botones</span></div>
+   <div style="background:#ff5ca8;color:#1d0716">Rosa fluor<span>#FF5CA8 · coroplast</span></div>
+   <div style="background:#14162b;color:#fff">Tinta azul<span>#14162B · texto</span></div>
+   <div style="background:#ffffff;color:#14162b">Superficie<span>#FFFFFF</span></div>
+   <div style="background:#4b4f68;color:#fff">Secundario<span>#4B4F68</span></div>
+  </div>
+  <p class="why">Por qué: es la única clara de las tres y se ve como un estudio de diseño, no como una plantilla. El azul y el rosa de riso son una combinación muy reconocible en diseño editorial y quedan muy bien en posts. Ojo: el sitio entero cambia a fondo claro.</p>
+ </div>
+</section>
+
+<!-- C -->
+<section class="opt c">
+ <div class="wrap">
+  <div class="tag"><b>C · Señal de calle</b><span>Lima eléctrico y naranja de seguridad sobre azul cobalto profundo. Como un anuncio luminoso de noche: se ve desde lejos.</span></div>
+  <div class="mock">
+   <div class="hero">
+    <div><h2>Diseño que<br><em>se nota.</em></h2><p>Contenido para redes, páginas web e impresión en Ciudad Juárez.</p>
+     <div class="btns"><span class="btn">Cotizar por WhatsApp <i class="ph-light ph-arrow-up-right"></i></span><span class="btn g">Ver trabajos</span></div></div>
+    <div class="pills"><span class="pill" style="background:#c8ff2e;color:#10180a">Redes sociales</span><span class="pill" style="background:#f3f5ff;color:#0d1430">Páginas web</span><span class="pill" style="background:#ff5b1f;color:#1f0800">Coroplast</span></div>
+   </div>
+   <div class="coro"><img src="assets/img/coroplast-party.webp" alt="Figuras de coroplast tamaño real en una fiesta"><div class="body"><div class="price"><span><small>DESDE</small><strong>$380</strong></span></div><h3>Figuras de coroplast</h3><p>Tamaño real, corte a silueta y base incluida.</p></div></div>
+  </div>
+  <div class="sw">
+   <div style="background:#0d1430;color:#f3f5ff">Cobalto noche<span>#0D1430</span></div>
+   <div style="background:#c8ff2e;color:#10180a">Lima<span>#C8FF2E · botones</span></div>
+   <div style="background:#ff5b1f;color:#1f0800">Naranja señal<span>#FF5B1F · coroplast</span></div>
+   <div style="background:#14204a;color:#f3f5ff">Superficie<span>#14204A</span></div>
+   <div style="background:#f3f5ff;color:#0d1430">Blanco<span>#F3F5FF · texto</span></div>
+   <div style="background:#b4bde3;color:#0d1430">Secundario<span>#B4BDE3</span></div>
+  </div>
+  <p class="why">Por qué: es la más atrevida y la que mejor "grita" ofertas como el coroplast. Conecta con lonas, banderas y rotulación. El lima casi nadie lo usa en agencias de la región. El dorado de tu logo choca un poco aquí; habría que usar el logo en versión blanca.</p>
+ </div>
+</section>
+</body>
+</html>
