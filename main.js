@@ -83,4 +83,17 @@
   d.querySelectorAll('.faq details').forEach(dt => dt.addEventListener('toggle', () => {
     if (dt.open) d.querySelectorAll('.faq details[open]').forEach(o => o !== dt && (o.open = false));
   }));
+
+  // ROI calculator
+  const calc = d.querySelector('.calc');
+  if (calc) {
+    const inp = calc.querySelector('input'), out = calc.querySelector('.calc__out');
+    const price = +calc.dataset.price;
+    const upd = () => {
+      const v = Math.max(1, +inp.value || 0);
+      const n = Math.max(1, Math.ceil(price / v));
+      out.innerHTML = `${calc.dataset.pre} <strong>${n}</strong> ${n === 1 ? calc.dataset.one : calc.dataset.post}`;
+    };
+    inp.addEventListener('input', upd); upd();
+  }
 })();
