@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bunkercreativomx.com/blog/sitemap.xml
