@@ -105,3 +105,14 @@
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   new IntersectionObserver(([e]) => { if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause(); }, { threshold: .35 }).observe(v);
 })();
+
+// tooltips de informacion (toque en celular, hover en escritorio)
+(() => {
+  const close = () => document.querySelectorAll('.info[aria-expanded="true"]').forEach(b => { b.setAttribute('aria-expanded', 'false'); document.getElementById(b.getAttribute('aria-controls')).hidden = true; });
+  document.querySelectorAll('.info').forEach(b => {
+    const pop = document.getElementById(b.getAttribute('aria-controls'));
+    b.addEventListener('click', e => { e.stopPropagation(); const open = b.getAttribute('aria-expanded') === 'true'; close(); if (!open) { b.setAttribute('aria-expanded', 'true'); pop.hidden = false; const bi = b.getBoundingClientRect(), pi = pop.getBoundingClientRect(); pop.style.setProperty('--ax', Math.max(12, Math.min(pi.width - 26, bi.left + bi.width / 2 - pi.left - 7)) + 'px'); } });
+  });
+  document.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
