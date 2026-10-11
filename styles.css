@@ -524,3 +524,26 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .plan__list li.is-no i{color:var(--dim)}
 .plan__list b{color:var(--fg);font-weight:700}
 @media (max-width:767px){.coro__lede{padding-right:56px}}
+
+/* ===== Video-invitaciones ===== */
+.vinv{max-width:none;padding:0;background:radial-gradient(80% 70% at 85% 30%,rgba(62,155,224,.35),transparent 70%),linear-gradient(180deg,#0f1a44 0%,var(--bg) 100%);position:relative;overflow:hidden;isolation:isolate;scroll-margin-top:80px}
+.vinv__inner{max-width:var(--max);margin:0 auto;padding:clamp(5rem,10vw,8rem) var(--pad) clamp(3rem,6vw,4rem);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
+.vinv__kick{display:inline-flex;align-items:center;gap:.6rem;margin:0 0 1.25rem;font-weight:700;color:var(--muted)}
+.vinv__kick span{padding:.3rem .7rem;border-radius:999px;background:var(--amber);color:var(--amber-ink);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.vinv__title{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,5.8vw,4.8rem);line-height:.95;letter-spacing:-.04em;margin:0 0 1.5rem}
+.vinv__title em{font-style:normal;color:var(--amber)}
+.vinv__lede{max-width:48ch;margin:0 0 1.75rem;font-size:1.18rem;line-height:1.5;color:var(--muted)}
+.vinv__feats{list-style:none;padding:0;margin:0 0 2.25rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.vinv__feats li{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .95rem;border-radius:999px;background:rgba(243,245,255,.07);border:1px solid var(--line);font-weight:700;font-size:.95rem}
+.vinv__feats i{font-size:1.15rem;color:var(--amber)}
+.vinv__btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.vinv__phone{position:relative;justify-self:center;width:min(320px,78vw);rotate:3deg;transition:rotate .6s var(--ease-2)}
+.vinv__phone:hover{rotate:0deg}
+.vinv__screen{aspect-ratio:9/16;border-radius:38px;overflow:hidden;background:#000;border:10px solid #070b1d;box-shadow:0 0 0 2px rgba(243,245,255,.14),0 50px 90px -40px rgba(0,0,0,.95),0 0 80px -20px rgba(62,155,224,.6)}
+.vinv__screen video{width:100%;height:100%;object-fit:cover;display:block}
+.vinv__tag{position:absolute;left:-24px;bottom:56px;display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1rem;border-radius:999px;background:#fff;color:var(--bg);font-weight:800;font-size:.92rem;rotate:-6deg;box-shadow:0 18px 30px -14px rgba(0,0,0,.7)}
+.vinv__tag i{color:#ff5b1f;font-size:1.15rem}
+.vinv__plans{max-width:var(--max);margin:0 auto;padding:0 var(--pad) clamp(5rem,10vw,8rem);scroll-margin-top:90px}
+.vinv__plans .plans{margin-bottom:1.5rem}
+@media (max-width:1024px){.vinv__inner{grid-template-columns:1fr}.vinv__phone{rotate:0deg}}
+@media (max-width:767px){.vinv__tag{left:50%;translate:-50% 0;bottom:-18px;rotate:-3deg;white-space:nowrap}.vinv__phone{margin-bottom:1.5rem}}

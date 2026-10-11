@@ -97,3 +97,11 @@
     inp.addEventListener('input', upd); upd();
   }
 })();
+
+// video-invitaciones: reproduce el video solo cuando se ve
+(() => {
+  const v = document.getElementById('vinv-video');
+  if (!v || !('IntersectionObserver' in window)) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  new IntersectionObserver(([e]) => { if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => {}); } else v.pause(); }, { threshold: .35 }).observe(v);
+})();
