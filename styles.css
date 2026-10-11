@@ -550,9 +550,10 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 
 /* info tooltip (mesa de regalos) */
 .plan__list li>span{position:relative}
-.info{display:inline-grid;place-items:center;width:20px;height:20px;margin:0 .1rem;padding:0;border:0;border-radius:50%;background:rgba(200,255,46,.18);color:var(--amber);font-size:.72rem;cursor:pointer;vertical-align:-3px;transition:background-color .2s}
-.info:hover,.info[aria-expanded="true"]{background:var(--amber);color:var(--amber-ink)}
-.plan__list .info i{width:auto;height:auto;margin:0;background:none;color:inherit;font-size:.85rem;display:block;line-height:1}
+.info{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;margin:0 .15rem;padding:0;border:1.6px solid currentColor;border-radius:50%;background:transparent;color:var(--amber);font:italic 700 12px/1 Georgia,"Times New Roman",serif;cursor:pointer;vertical-align:1px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:background-color .2s,color .2s}
+.info:hover,.info[aria-expanded="true"]{background:var(--amber);border-color:var(--amber);color:var(--amber-ink)}
+.info::before{content:"";position:absolute;inset:-12px}
+.info{position:relative}
 .info__pop{position:absolute;left:0;right:-8px;bottom:calc(100% + 10px);z-index:5;display:block;padding:.9rem 1rem;border-radius:16px;background:#fff;color:var(--bg);font-size:.88rem;line-height:1.45;font-weight:500;box-shadow:0 24px 40px -16px rgba(0,0,0,.8)}
 .info__pop[hidden]{display:none}
 .info__pop b{font-weight:800;color:var(--bg)}
