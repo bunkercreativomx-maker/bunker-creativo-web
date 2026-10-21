@@ -245,6 +245,7 @@ section{padding:clamp(5rem,11vw,9rem) var(--pad);max-width:var(--max);margin:0 a
 .foot__col{display:flex;flex-direction:column;gap:.5rem}
 .foot__col a:hover{color:var(--fg)}
 .foot__copy{margin:0;color:var(--dim)}
+.foot__legal{color:#0e1633;font-size:.8em}
 
 .wa-float{position:fixed;right:18px;bottom:18px;z-index:45;width:60px;height:60px;border-radius:50%;background:#25d366;color:#08210f;display:none;place-items:center;font-size:1.9rem;box-shadow:0 14px 30px -12px rgba(2,6,24,.85)}
 
