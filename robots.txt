@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://bunkercreativomx.com/sitemap.xml
 Sitemap: https://bunkercreativomx.com/blog/sitemap.xml
