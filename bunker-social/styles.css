@@ -219,3 +219,6 @@ details p{color:var(--muted);padding:0 0 1.4rem;max-width:56ch}
   .hero-copy>*,.hero-visual{animation:none}
   .btn{transition:background-color .2s ease}
 }
+
+.brand-wide{height:38px;width:auto;display:block}
+.logo-img{width:28px;height:28px;border-radius:8px;flex:none;vertical-align:middle;margin-right:.5rem}
