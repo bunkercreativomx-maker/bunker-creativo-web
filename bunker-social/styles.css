@@ -222,3 +222,12 @@ details p{color:var(--muted);padding:0 0 1.4rem;max-width:56ch}
 
 .brand-wide{height:38px;width:auto;display:block}
 .logo-img{width:28px;height:28px;border-radius:8px;flex:none;vertical-align:middle;margin-right:.5rem}
+
+.nets{border-top:1px solid var(--line);padding:1.5rem 0}
+.nets-in{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.nets-t{color:var(--dim);font-size:14px;margin-right:.25rem}
+.net-b{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;font-size:15px;color:var(--text,#fff)}
+.net-b i{font-size:20px}
+.net-b.yt i{color:#FF0000}
+.nets-note{flex-basis:100%;color:var(--dim);font-size:13px}
+.nets-note a{color:var(--muted);text-decoration:underline}
