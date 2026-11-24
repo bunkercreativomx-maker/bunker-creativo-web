@@ -1,0 +1,32 @@
+[
+ {
+  "src": "v/licuadora-g1.mp4",
+  "poster": "v/licuadora-g1.jpg",
+  "title": "Licuadora portátil · gancho 1"
+ },
+ {
+  "src": "v/licuadora-g2.mp4",
+  "poster": "v/licuadora-g2.jpg",
+  "title": "Licuadora portátil · gancho 2"
+ },
+ {
+  "src": "v/aspiradora-g1.mp4",
+  "poster": "v/aspiradora-g1.jpg",
+  "title": "Aspiradora inalámbrica · gancho 1"
+ },
+ {
+  "src": "v/aspiradora-g2.mp4",
+  "poster": "v/aspiradora-g2.jpg",
+  "title": "Aspiradora inalámbrica · gancho 2"
+ },
+ {
+  "src": "v/lampara-g1.mp4",
+  "poster": "v/lampara-g1.jpg",
+  "title": "Lámpara de atardecer · gancho 1"
+ },
+ {
+  "src": "v/lampara-g2.mp4",
+  "poster": "v/lampara-g2.jpg",
+  "title": "Lámpara de atardecer · gancho 2"
+ }
+]
